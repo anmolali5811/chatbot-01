@@ -30,10 +30,10 @@ export const generateChatCompletion = async (
       model: "gpt-3.5-turbo",
       messages: chats,
     });
-    // user.chats.push(chatResponse.data.choices[0].message);
-    user.chats.push({
-    "role": "assistant",
-    "content": "Hello! How can I assist you today?",});
+    user.chats.push(chatResponse.data.choices[0].message);
+    // user.chats.push({
+    // "role": "assistant",
+    // "content": "Hello! How can I assist you today?",});
     await user.save();
     return res.status(200).json({ chats: user.chats });
   } catch (error) {

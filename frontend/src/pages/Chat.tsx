@@ -18,7 +18,7 @@ type Message = {
   content: string;
 };
 
-const socket = io("http://localhost:6000", {
+const socket = io("http://localhost:5000", {
   path: "/api/socket.io",
 });
 
