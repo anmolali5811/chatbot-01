@@ -11,7 +11,7 @@ import {
   sendChatRequest,
 } from "../helpers/api-communicator";
 import toast from "react-hot-toast";
-import { io } from "socket.io-client";
+import io from "socket.io-client";
 
 type Message = {
   role: "user" | "assistant";
@@ -19,7 +19,7 @@ type Message = {
 };
 
 const socket = io("https://chatbot-f4iy.onrender.com", {
-  path: "/api/socket.io",
+  withCredentials: true,
 });
 
 const Chat = () => {

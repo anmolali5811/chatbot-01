@@ -7,10 +7,9 @@ const httpServer = createServer(app);
 
 // socket.io
 const io = new Server(httpServer, {
-  path: "/api/socket.io",
   cookie: true,
   pingTimeout: 60000,
-  cors: { credentials: true, origin: ["https://chatbot-01-react-awzq4jxu1-anmolali5811.vercel.app", "http://localhost:5173"] },
+  cors: { credentials: true, origin: ["https://chatbot-01-react.vercel.app", "http://localhost:5173"] },
 });
 io.on("connection", (socket) => {
   socket.on("new message", (userEmail) => {

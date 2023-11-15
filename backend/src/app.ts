@@ -8,7 +8,7 @@ config();
 const app = express();
 
 //middlewares
-app.use(cors({ origin: ["https://chatbot-01-react-awzq4jxu1-anmolali5811.vercel.app", "http://localhost:5173"], credentials: true }));
+app.use(cors({ origin: ["https://chatbot-01-react.vercel.app", "http://localhost:5173"], credentials: true }));
 app.use(express.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
